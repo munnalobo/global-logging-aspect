@@ -1,0 +1,5 @@
+rootProject.name = 'utilities'
+
+include 'logging'
+include 'testapplication'
+include 'graph'

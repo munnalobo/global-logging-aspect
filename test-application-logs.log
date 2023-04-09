@@ -1,0 +1,831 @@
+2023-04-09T12:27:11.725-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:27:12.650-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printLol(MunnaTestService.java:26) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.001-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.M2(MunnaTestService.java:29) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:19) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.002-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.M3(MunnaTestService.java:33) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:20) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.003-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.MM4(MunnaTestService.java:37) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.M3_aroundBody6(MunnaTestService.java:34) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure7.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.M3(MunnaTestService.java:33) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:20) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.003-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod(SomeClassTwo.java:8) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:21) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.004-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.M5(SomeClassTwo.java:14) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod_aroundBody0(SomeClassTwo.java:8) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo$AjcClosure1.run(SomeClassTwo.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod(SomeClassTwo.java:8) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:21) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.004-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.M6(SomeClassTwo.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod_aroundBody0(SomeClassTwo.java:9) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo$AjcClosure1.run(SomeClassTwo.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod(SomeClassTwo.java:8) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:21) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.004-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.M7(SomeClassTwo.java:23) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.M6_aroundBody4(SomeClassTwo.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo$AjcClosure5.run(SomeClassTwo.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.M6(SomeClassTwo.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod_aroundBody0(SomeClassTwo.java:9) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo$AjcClosure1.run(SomeClassTwo.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.SomeClassTwo.someClassTwoPublicMethod(SomeClassTwo.java:8) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething_aroundBody0(MunnaTestService.java:21) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService$AjcClosure1.run(MunnaTestService.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.MunnaTestService.printSomething(MunnaTestService.java:18) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:25) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.005-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.ControllerServiceThree.someServiceTwoMethodTwo(ControllerServiceThree.java:9) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:26) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:38.005-04:00 ERROR [,,] 42838 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : Some Exception Happened From Logging Aspect:
+
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ApplicationContext.getBean(String)" because the return value of "com.neuron.logging.aspect.LoggingAspect.ajc$inlineAccessFieldGet$com_neuron_logging_aspect_LoggingAspect$com_neuron_logging_aspect_LoggingAspect$applicationContext(com.neuron.logging.aspect.LoggingAspect)" is null
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:57) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.ControllerServiceThree.M8(ControllerServiceThree.java:14) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.ControllerServiceThree.someServiceTwoMethodTwo_aroundBody0(ControllerServiceThree.java:9) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.ControllerServiceThree$AjcClosure1.run(ControllerServiceThree.java:1) ~[logging-0.0.1.jar:na]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:179) ~[aspectjweaver-1.9.19.jar:na]
+	at com.neuron.logging.aspect.LoggingAspect.intercept(LoggingAspect.java:78) ~[logging-0.0.1.jar:na]
+	at com.neuron.logging.service.ControllerServiceThree.someServiceTwoMethodTwo(ControllerServiceThree.java:9) ~[logging-0.0.1.jar:na]
+	at com.neuron.testapplication.controller.TestController.saySomething(TestController.java:26) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.5.jar:6.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.5.jar:6.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-04-09T12:30:39.294-04:00  INFO [,,] 51587 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 51587 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T12:30:39.295-04:00  INFO [,,] 51587 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T12:30:39.623-04:00  INFO [,,] 51587 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T12:30:39.627-04:00  INFO [,,] 51587 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T12:30:39.627-04:00  INFO [,,] 51587 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T12:30:39.661-04:00  INFO [,,] 51587 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T12:30:39.661-04:00  INFO [,,] 51587 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 347 ms
+2023-04-09T12:30:39.779-04:00  INFO [,,] 51587 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T12:30:39.783-04:00  INFO [,,] 51587 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.703 seconds (process running for 0.936)
+2023-04-09T12:31:07.558-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T12:31:07.558-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T12:31:07.558-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-09T12:31:07.573-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:07.573774Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:31:52.565-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.565298Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:31:52.565-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.565855Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:31:52.566-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.566382Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:31:52.566-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.566774Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T12:31:52.567-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.567070Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:31:52.567-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.567322Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:31:52.567-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.567582Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:31:52.567-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.567896Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T12:31:52.568-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.568151Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:31:52.568-04:00  INFO [,,] 51587 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:31:52.568352Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
+2023-04-09T12:31:53.659-04:00  INFO [,,] 51665 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 51665 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T12:31:53.660-04:00  INFO [,,] 51665 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T12:31:53.991-04:00  INFO [,,] 51665 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T12:31:53.994-04:00  INFO [,,] 51665 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T12:31:53.995-04:00  INFO [,,] 51665 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T12:31:54.027-04:00  INFO [,,] 51665 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T12:31:54.028-04:00  INFO [,,] 51665 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2023-04-09T12:31:54.149-04:00  INFO [,,] 51665 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T12:31:54.153-04:00  INFO [,,] 51665 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.661 seconds (process running for 0.883)
+2023-04-09T12:32:29.099-04:00  INFO [,,] 51721 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 51721 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T12:32:29.100-04:00  INFO [,,] 51721 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T12:32:29.422-04:00  INFO [,,] 51721 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T12:32:29.425-04:00  INFO [,,] 51721 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T12:32:29.426-04:00  INFO [,,] 51721 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T12:32:29.459-04:00  INFO [,,] 51721 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T12:32:29.460-04:00  INFO [,,] 51721 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 345 ms
+2023-04-09T12:32:29.583-04:00  INFO [,,] 51721 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T12:32:29.586-04:00  INFO [,,] 51721 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.74 seconds (process running for 0.965)
+2023-04-09T12:34:01.672-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T12:34:01.673-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T12:34:01.673-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-09T12:36:18.949-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.949070Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:36:18.949-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.949934Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:36:18.950-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.950155Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:36:18.950-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.950545Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:36:18.950-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.950872Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T12:36:18.951-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.951151Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:36:18.951-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.951334Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:36:18.951-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.951524Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:36:18.951-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.951747Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T12:36:18.951-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.951931Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:36:18.952-04:00  INFO [,,] 51721 --- [http-nio-8080-exec-1] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T16:36:18.952051Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
+2023-04-09T12:36:24.699-04:00  INFO [,,] 51901 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 51901 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T12:36:24.699-04:00  INFO [,,] 51901 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T12:36:25.072-04:00  INFO [,,] 51901 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T12:36:25.076-04:00  INFO [,,] 51901 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T12:36:25.076-04:00  INFO [,,] 51901 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T12:36:25.107-04:00  INFO [,,] 51901 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T12:36:25.107-04:00  INFO [,,] 51901 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
+2023-04-09T12:36:25.225-04:00  INFO [,,] 51901 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T12:36:25.228-04:00  INFO [,,] 51901 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.746 seconds (process running for 0.97)
+2023-04-09T12:49:14.014-04:00  INFO [,,] 52271 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 52271 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T12:49:14.017-04:00  INFO [,,] 52271 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T12:49:14.330-04:00  INFO [,,] 52271 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T12:49:14.333-04:00  INFO [,,] 52271 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T12:49:14.334-04:00  INFO [,,] 52271 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T12:49:14.369-04:00  INFO [,,] 52271 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T12:49:14.369-04:00  INFO [,,] 52271 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 334 ms
+2023-04-09T12:49:14.493-04:00  INFO [,,] 52271 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T12:49:14.498-04:00  INFO [,,] 52271 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.696 seconds (process running for 0.918)
+2023-04-09T12:49:18.754-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T12:49:18.755-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T12:49:18.755-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-09T12:49:45.303-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.303517Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:49:45.304-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.304441Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:49:45.304-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.304741Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:49:45.304-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.304919Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305148Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305375Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305539Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305692Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305851Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T12:49:45.305-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.305983Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T12:49:45.306-04:00  INFO [,,] 52271 --- [http-nio-8080-exec-2] c.neuron.logging.service.LoggingAspect   : 2023-04-09T16:49:45.306125Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
+2023-04-09T13:16:22.894-04:00  INFO [,,] 54086 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 54086 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T13:16:22.895-04:00  INFO [,,] 54086 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T13:16:23.191-04:00  INFO [,,] 54086 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T13:16:23.194-04:00  INFO [,,] 54086 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T13:16:23.194-04:00  INFO [,,] 54086 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T13:16:23.228-04:00  INFO [,,] 54086 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T13:16:23.228-04:00  INFO [,,] 54086 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 318 ms
+2023-04-09T13:16:23.353-04:00  INFO [,,] 54086 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T13:16:23.357-04:00  INFO [,,] 54086 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.682 seconds (process running for 0.918)
+2023-04-09T13:17:16.830-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T13:17:16.830-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T13:17:16.831-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-09T13:17:28.326-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.326537Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T13:17:28.328-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.328670Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:17:28.329-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.329230Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:17:28.329-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.329629Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:17:28.330-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.330129Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T13:17:28.330-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.330613Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:17:28.330-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.330943Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T13:17:28.331-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.331231Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T13:17:28.331-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.331614Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T13:17:28.331-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.331867Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T13:17:28.332-04:00  INFO [,,] 54086 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:17:28.332148Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
+2023-04-09T13:21:02.543-04:00  INFO [,,] 54380 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 54380 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T13:21:02.543-04:00  INFO [,,] 54380 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T13:21:02.839-04:00  INFO [,,] 54380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T13:21:02.842-04:00  INFO [,,] 54380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T13:21:02.842-04:00  INFO [,,] 54380 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T13:21:02.874-04:00  INFO [,,] 54380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T13:21:02.874-04:00  INFO [,,] 54380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 315 ms
+2023-04-09T13:21:02.998-04:00  INFO [,,] 54380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T13:21:03.001-04:00  INFO [,,] 54380 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.722 seconds (process running for 0.973)
+2023-04-09T13:21:11.848-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T13:21:11.848-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T13:21:11.849-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-09T13:21:11.863-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.863198Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864011Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864280Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864459Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864675Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864832Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T13:21:11.864-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.864984Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T13:21:11.865-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.865132Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T13:21:11.865-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.865338Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T13:21:11.865-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.865476Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T13:21:11.865-04:00  INFO [,,] 54380 --- [http-nio-8080-exec-1] c.neuron.logging.service.LoggingAspect   : 2023-04-09T17:21:11.865623Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
+2023-04-09T16:25:21.705-04:00  INFO [,,] 67059 --- [main] c.n.t.TestapplicationApplication         : Starting TestapplicationApplication using Java 19.0.2 with PID 67059 (/Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities/testapplication/build/classes/java/main started by venkatamaheshkumarguntur in /Users/venkatamaheshkumarguntur/workspace/project_neuron/utilities)
+2023-04-09T16:25:21.707-04:00  INFO [,,] 67059 --- [main] c.n.t.TestapplicationApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T16:25:22.010-04:00  INFO [,,] 67059 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-09T16:25:22.014-04:00  INFO [,,] 67059 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T16:25:22.014-04:00  INFO [,,] 67059 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-09T16:25:22.045-04:00  INFO [,,] 67059 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T16:25:22.046-04:00  INFO [,,] 67059 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 323 ms
+2023-04-09T16:25:22.163-04:00  INFO [,,] 67059 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-09T16:25:22.166-04:00  INFO [,,] 67059 --- [main] c.n.t.TestapplicationApplication         : Started TestapplicationApplication in 0.69 seconds (process running for 0.973)
+2023-04-09T16:25:31.830-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T16:25:31.830-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T16:25:31.830-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-09T16:25:36.592-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.592834Z | class: MunnaTestService | method: printSomething | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T16:25:36.594-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.594824Z | class: MunnaTestService | method: printLol | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T16:25:36.595-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.595472Z | class: MunnaTestService | method: M2 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T16:25:36.595-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.595876Z | class: MunnaTestService | method: M3 | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T16:25:36.596-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.596317Z | class: MunnaTestService | method: MM4 | calling-method: MunnaTestService.M3 | span-id: spanId
+2023-04-09T16:25:36.596-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.596776Z | class: SomeClassTwo | method: someClassTwoPublicMethod | calling-method: MunnaTestService.printSomething | span-id: spanId
+2023-04-09T16:25:36.597-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.597119Z | class: SomeClassTwo | method: M5 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T16:25:36.597-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.597575Z | class: SomeClassTwo | method: M6 | calling-method: SomeClassTwo.someClassTwoPublicMethod | span-id: spanId
+2023-04-09T16:25:36.598-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.598042Z | class: SomeClassTwo | method: M7 | calling-method: SomeClassTwo.M6 | span-id: spanId
+2023-04-09T16:25:36.598-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.598403Z | class: ControllerServiceThree | method: someServiceTwoMethodTwo | calling-method: TestController.saySomething | span-id: spanId
+2023-04-09T16:25:36.598-04:00  INFO [,,] 67059 --- [http-nio-8080-exec-2] c.neuron.logging.aspect.LoggingAspect    : 2023-04-09T20:25:36.598686Z | class: ControllerServiceThree | method: M8 | calling-method: ControllerServiceThree.someServiceTwoMethodTwo | span-id: spanId
