@@ -6,6 +6,7 @@ import com.neuron.logging.models.SpringLog;
 import com.neuron.logging.service.LogEverThingAnnotation;
 import com.neuron.logging.service.LogGenericDataAnnotation;
 import com.neuron.logging.service.LogHttpDataAnnotation;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,6 +15,8 @@ import org.aspectj.lang.annotation.SuppressAjWarnings;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Method;
@@ -27,13 +30,13 @@ import java.util.Objects;
 @Slf4j
 @SuppressAjWarnings({"adviceDidNotMatch"})
 @Aspect
+@Order(2)
+@DependsOn("spanIdInterceptor")
 @Service
 public class LoggingAspect {
-    @Autowired
-    public SpanIdInterceptor spanIdInterceptor;
 
     @Autowired
-    ApplicationContext applicationContext;
+    SpanIdInterceptor spanIdInterceptor;
 
     public List<SpringLog> springLogs = new ArrayList<>();
 
@@ -49,6 +52,7 @@ public class LoggingAspect {
     @Around("(execution(private * * (..)) || execution(* * (..))) && !target(com.neuron.logging.models.SpringLog)")
     public Object intercept(final ProceedingJoinPoint point) throws Throwable {
         try {
+//            SpanIdInterceptor spanIdInterceptor = applicationContext.getBean(SpanIdInterceptor.class);
             if (Objects.nonNull(point.getTarget())) {
                 Class<?> declaringType = point.getSignature().getDeclaringType();
                 final Method method = ((MethodSignature) point.getSignature()).getMethod();
